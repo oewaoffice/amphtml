@@ -1407,6 +1407,22 @@ export const ANALYTICS_CONFIG = /** @type {!JsonObject} */ ({
       },
     },
   },
+  'oewav2': {
+    'transport': {'beacon': false, 'xhrpost': false, 'image': true},
+    'requests': {
+      'pageview': '${url}?s=${s}' +
+        '&amp=1' +
+        '&cp=${cp}' +
+        '&host=${canonicalHost}' +
+        '&path=${canonicalPath}',
+    },
+    'triggers': {
+      'pageview': {
+        'on': 'visible',
+        'request': 'pageview',
+      },
+    },
+  },
   'parsely': {
     'requests': {
       'host': 'https://srv.pixel.parsely.com',
@@ -2011,4 +2027,7 @@ ANALYTICS_CONFIG['adobeanalytics_nativeConfig']
       /* TEMPORARY EXCEPTION */ 'Ping'] = true;
 
 ANALYTICS_CONFIG['oewa']['triggers']['pageview']['iframe' +
+/* TEMPORARY EXCEPTION */ 'Ping'] = true;
+
+ANALYTICS_CONFIG['oewav2']['triggers']['pageview']['iframe' +
 /* TEMPORARY EXCEPTION */ 'Ping'] = true;
